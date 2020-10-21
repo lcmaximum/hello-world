@@ -152,18 +152,19 @@ nav a:hover, nav a:focus {
     }
 }
 
-/*home-about*/
+/*home-about
 
-.home-about {
-    width: 100vw;
-    margin-left: -2.5%;
-    
-    position: relative;
-}
+Hi Shawn! this is the section I've been playing around with. I copied his code exactly (i think) and have tried a few other
+methods (right margins, adjusting padding, moving the margin between the '.home-about' section and the '.home-about-textbox', but the grey textbox
+always stretches past the cover photo, at least on the right side. */
+
 
 .home-about-textbox {
     background-color: #232323;
     padding: 3em;
+    width: 100vw;
+    margin-left: -2.5%;
+    position: relative;
      /* padding: 3em; my version has less text than the example - will 3em be too much or does it not matter? */
 
     
