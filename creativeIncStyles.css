@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    /* margin: 0 auto; */
+}
+/*typography*/
+
+h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+
+}
+
+.pagetitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.pagetitle span {
+    font-weight: 300;
+    display: block; /*keeps it on its own line*/
+    font-size: .9em; /*percentage of PARENT font size*/
+}
+
+/*screen get bigger? increase font size! This guy puts each media query at the end of the section. i feel like i'd rahter
+have them all grouped together. Is that a personal preference, or is his way more considerate of other people reading the code?
+I guess I'll do it his way now anyway - i need physical practice with media queries. */
+
+@media (min-width:60rem) {
+    .pagetitle {
+    font-size: 3.7rem;
+    }
+}
+/*buttons*/
+
+.button {
+    display: inline-block;
+            /*Also, with display: inline-block , the top and bottom margins/paddings are respected, but 
+            with display: inline they are not. 
+            Compared to display: block , the major difference is that 
+            display: inline-block does not add a line-break after the element, so the element can sit next to other elements.*/
+    font-size: 1.25rem; /* percentage of HTML default font size */
+    text-decoration: none; /*try moving this to the a element and see if there's a reason not to do that */
+    text-transform: uppercase;
+    border-width: 2px; /* wtf i thought pixels were over. see what happens changing this to ems.*/
+    border-style: solid;
+    padding: .5em /* top and bottom*/ 1.5em; /*left and right*/
+
+
+}
+
+.button-accent {
+    color: rgb(98, 255, 132);
+    border-color: rgb(98, 255, 132);
+
+}
+
+.button-accent:hover, .button-accent:focus {
+    background: rgb(98, 255, 132);
+    color: #232323;
+}
+
+@media(min-width: 60rem) {
+    .button {
+        font-size: 1.5rem;
+        padding: 1em 2.5em;
+    }
+}
+
+/* header */
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1.2em;
+}
+
+
+nav ul {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    padding: .5em;
+    color: #FFF;
+}
+
+nav a:hover, nav a:focus {
+    background: rgb(98, 255, 132);
+    color: #232323;
+    font-weight: 500;
+}
+
+@media (min-width:60rem) {
+    .logo {
+        float: left;
+        margin: 0em 3em;
+
+    }
+    .nav {
+        float: right;
+    }
+}
+
+/*home-hero*/
+
+.home-hero {
+    background-image: url("creativeInc\ images/hero-bg.jpg");
+    padding: 10em 0;
+    color: #FFF; /*text color for entire section, not just the header*/
+    background-size: cover;
+    background-position: center; /*header bg images grows and shrinks with browser instead of tiling */
+
+}
+
+@media (min-width:60rem) {
+    .home-hero {
+        height: 100vh;
+        
+        padding-top: 35vh; /*styling the viewport. vh is a measure of viewport height. go over this more. */
+    }
+}
+
+/*home-about*/
+
+.home-about {
+    width: 100vw;
+    margin-left: -2.5%;
+    
+    position: relative;
+}
+
+.home-about-textbox {
+    background-color: #232323;
+    padding: 3em;
+     /* padding: 3em; my version has less text than the example - will 3em be too much or does it not matter? */
+
+    
+}
+
+small {
+    font-size: x-small;
+}
